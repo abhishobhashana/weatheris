@@ -8,8 +8,8 @@ type SEOProps = {
   keywords?: string[];
 };
 
-const SITE_NAME = "weatheron";
-const SITE_URL = "https://weatheron.vercel.app";
+const SITE_NAME = "weatheris";
+const SITE_URL = "https://weatheris.vercel.app";
 const DEFAULT_IMAGE = "/og-image.png";
 
 export function createSEO({

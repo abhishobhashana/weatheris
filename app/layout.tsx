@@ -11,10 +11,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Weatheron",
+    default: "weatheris",
     template: "%s",
   },
-  description: "Weatheron",
+  description: "weatheris",
   keywords: [
     "weather",
     "frontend developer",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "react.js",
     "web development",
   ],
-  metadataBase: new URL("https://weatheron.vercel.app"),
+  metadataBase: new URL("https://weatheris.vercel.app"),
   // verification: {
   //   google: "AnduTPvERUUcVPeBxD28apaqOoc3pvEucDXZcKalmVk",
   // },
@@ -49,24 +49,24 @@ export const metadata: Metadata = {
   // },
   manifest: "/manifest.json",
   openGraph: {
-    title: "weatheron",
-    description: "weatheron",
-    url: "https://weatheron.vercel.app",
-    siteName: "weatheron",
+    title: "weatheris",
+    description: "weatheris",
+    url: "https://weatheris.vercel.app",
+    siteName: "weatheris",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "weatheron",
+        alt: "weatheris",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "weatheron",
-    description: "weatheron",
+    title: "weatheris",
+    description: "weatheris",
     images: ["/og-image.png"],
   },
 };
