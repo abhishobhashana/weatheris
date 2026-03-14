@@ -40,14 +40,7 @@ export default function Nav({ className = "" }) {
       initial={false}
       animate={isMobile ? { scale: [1, 0.96, 1] } : { scale: 1 }}
       transition={isMobile ? { duration: 0.25, ease: "easeOut" } : {}}
-      className={`${className}
-        flex lg:flex-col w-full mt-10
-        ${
-          isMobile
-            ? "bg-transparent backdrop-blur-xs rounded-full shadow-lg p-1 border border-gray"
-            : ""
-        }
-      `}
+      className={`${className} flex flex-col w-full mt-10`}
     >
       <motion.button
         onClick={() => dispatch(toggleSidebar())}
@@ -68,41 +61,17 @@ export default function Nav({ className = "" }) {
         const isActive = pathname === item.href;
 
         return (
-          <Link key={item.name} href={item.href} className={`relative flex-1`}>
-            <div
-              className={`relative flex lg:flex-row flex-col items-center lg:justify-start justify-center`}
-            >
-              {isMobile && isActive && (
-                <motion.div
-                  layoutId="active-pill"
-                  className="absolute inset-0 bg-white/20 rounded-full border border-gray"
-                  transition={{
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 30,
-                  }}
-                />
-              )}
-
-              <motion.div
-                whileTap={isMobile ? { scale: 0.85 } : {}}
-                animate={isMobile ? { scale: isActive ? 1.1 : 1 } : {}}
-                transition={{
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 30,
-                }}
-                className={`relative z-10 w-full flex lg:flex-row flex-col items-center lg:gap-3 gap-1 px-3 py-2 lg:text-base text-xs font-medium
-                  ${
-                    isActive
-                      ? "md:bg-gray/20 rounded-lg text-blue"
-                      : "text-black dark:text-white"
-                  }`}
-              >
-                <IoStarOutline className="text-lg" />
-                <p>{item.name}</p>
-              </motion.div>
-            </div>
+          <Link
+            key={item.name}
+            href={item.href}
+            className={`z-10 w-full flex items-center lg:gap-3 gap-1 px-3 py-2 font-medium ${
+              isActive
+                ? "bg-gray/20 rounded-lg text-blue"
+                : "text-black dark:text-white"
+            }`}
+          >
+            <IoStarOutline className="text-lg" />
+            <p>{item.name}</p>
           </Link>
         );
       })}

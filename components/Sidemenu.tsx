@@ -17,7 +17,7 @@ export default function Sidemenu() {
       <motion.div
         animate={{ x: isOpen ? 0 : -sidebarWidth }}
         transition={{ type: "spring", stiffness: 150, damping: 20 }}
-        className="lg:flex hidden md:w-[19.5%] w-full z-10 fixed lg:top-0 bottom-0 flex-col lg:justify-between justify-end gap-0.5 md:h-[calc(100dvh-1.5rem)] h-full lg:m-2.5 lg:mr-0 p-2.5 bg-secondary/90 backdrop-blur-xl rounded-2xl shadow-md"
+        className="flex lg:w-[19.5%] md:w-[40%] w-full z-10 fixed md:top-0 bottom-0 flex-col justify-between gap-0.5 md:h-[calc(100dvh-1.5rem)] h-full md:m-2.5 md:mr-0 p-2.5 bg-secondary/90 backdrop-blur-xl rounded-2xl shadow-md"
       >
         <Nav />
       </motion.div>
